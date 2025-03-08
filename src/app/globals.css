@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@import "tailwindcss-animated";
+/* importing Poppins Google font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@theme {
+  /* adding nunito font as primary */
+  --font-primary: "Nunito", sans-serif;
+  --font-tertiary: "Plus Jakarta Sans", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+  
+  /* adding some custom colors */
+  --color-brand-light: rgba(158, 102, 226, 0.779);
+  --color-brand-dark: rgba(137, 60, 231, 0.8);
+  --color-red-error: rgba(230, 40, 40, 0.249);
+  /* adding conic gradient spin animation */
+  --animate-border-spin: border-spin 10s linear infinite;
+
+  @keyframes border-spin {
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+}
+
+@layer components {
+    /* Act as a border */
+    .card-wrapper {
+      @apply relative bg-gradient-to-b from-slate-700 to-slate-900 rounded-2xl overflow-hidden;
+      
+    } 
+  
+    /* Gradient */
+    .card-wrapper::before {
+  
+      background: conic-gradient(
+        from 0deg at 50% 50%,
+        rgba(70, 131, 180, 0) 0deg,
+        rgba(137, 60, 231, 0.8) 40deg,   /* Brightest at this point */
+        rgba(158, 102, 226, 0.779) 60deg,
+        rgba(137, 60, 231, 0.4) 80deg,
+        rgba(137, 60, 231, 0.2) 100deg,
+        /* rgba(165,39,255,0.48), */
+        /* oklch(0.457 0.24 277.023) */
+        transparent 180deg   /* Completely transparent here */
+      );
+      
+
+
+
+      @apply absolute w-[150%] h-[150%] left-[-25%] top-[-25%] content-[""] animate-border-spin
+  
+    }
+  
+    /* Body */
+    .card-content {
+      @apply absolute left-[1px] top-[1px] h-[calc(100%-2.5px)] w-[calc(100%-2.5px)] rounded-2xl bg-slate-900;
+      /* @apply absolute left-[1px] top-[1px] h-[calc(100%-2.5px)] w-[calc(100%-2.5px)] rounded-2xl bg-slate-950; */
+
+    }
+  }
+
+@plugin 'tailwind-scrollbar';
+@plugin 'tailwindcss-animated';
+@plugin 'tailwindcss-motion';
