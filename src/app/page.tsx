@@ -266,7 +266,7 @@ const Landing = () => {
                         className="my-icon mr-1 md:mr-2 text-indigo-500 group-hover:motion-preset-pop motion-duration-500"
                         />
 
-                        <span className="group-hover:motion-preset-shrink motion-duration-500 md:text-base text-base lg:text-sm text-indigo-500 ">Generate</span>
+                        <span className="group-hover:motion-preset-shrink motion-duration-500 md:text-lg text-base  text-indigo-500 ">Generate</span>
                       </>
                       : <span className=" flex gap-1 md:gap-2 ">
                           <div className="rounded-full md:size-3 size-2 bg-indigo-500 motion-preset-oscillate motion-duration-600"></div>
