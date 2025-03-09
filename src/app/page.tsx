@@ -93,7 +93,7 @@ const Landing = () => {
             setIsCopied(true)
 
             // setting the copy state to false after 3 seconds
-            setInterval(() => setIsCopied(false), 5000)
+            setInterval(() => setIsCopied(false), 2000)
 
           } catch (err) {
             console.log(err)
@@ -111,7 +111,7 @@ const Landing = () => {
       }
 
     return (
-        <div className="flex items-center flex-col px-3 py-2 md:px-16 md:py-6 w-full min-h-screen bg-[#000] font-primary bg-[radial-gradient(#ffffff25_0.6px,#14001d2a_0.6px)] md:bg-[radial-gradient(#ffffff25_1px,#14001d2a_1px)] bg-[size:10px_10px] md:bg-[size:20px_20px] overflow-hidden ">
+        <div className="flex items-center flex-col px-4 py-4 md:px-16 md:py-6 w-full min-h-screen bg-[#000] font-primary bg-[radial-gradient(#ffffff25_0.6px,#14001d2a_0.6px)] md:bg-[radial-gradient(#ffffff25_1px,#14001d2a_1px)] bg-[size:10px_10px] md:bg-[size:20px_20px] overflow-hidden ">
 
         {/* gradient blob */}
         <div className=" absolute h-[200px] w-[200px] md:h-[800px] md:w-[800px] rounded-full bg-gradient-to-b from-indigo-300/40 via-indigo-500/10 to-transparent 
@@ -120,7 +120,7 @@ const Landing = () => {
         {/* navbar */}
         <div className="flex justify-center md:justify-between w-full items-center">
             {/* brand logo */}
-            <h1 className=" font-primary font-bold md:text-3xl bg-gradient-to-tl from-slate-800 via-indigo-500 to-indigo-600 bg-clip-text text-transparent  transition-all duration-300 hover:animate-ease-in cursor-pointer motion-preset-pop motion-duration-2000">BrandZen</h1>
+            <h1 className=" font-primary text-2xl font-bold md:text-3xl bg-gradient-to-tl from-slate-800 via-indigo-500 to-indigo-600 bg-clip-text text-transparent  transition-all duration-300 hover:animate-ease-in cursor-pointer motion-preset-pop motion-duration-2000">BrandZen</h1>
 
             {/* primary cta */}
             <button 
@@ -148,41 +148,41 @@ const Landing = () => {
                 {/* pill gradient border */}
                 <div className="relative p-[0.5px] rounded-full bg-gradient-to-tl from-slate-800 via-indigo-500 to-indigo-600">
 
-                    <div className="flex gap-1 md:gap-2 justify-center items-center rounded-full px-4 py-0.5 text-xs md:px-12 md:py-1 md:text-sm font-bold text-indigo-300 bg-gradient-to-b from-neutral-900 to-neutral-950 ">
+                    <div className="flex gap-1 md:gap-2 justify-center items-center rounded-full px-8 py-1.5 text-sm md:px-12 md:py-1 md:text-sm font-bold text-indigo-300 bg-gradient-to-b from-neutral-900 to-neutral-950 ">
                         <span className="">✨ Craft Your Brand with AI</span> 
-                        <ChevronRightIcon className="size-5 md:size-7 md:p-0 text-indigo-500 transition-all duration-300 delay-100 group-hover:md:ml-2 group-hover:ml-1"/>
+                        <ChevronRightIcon className="size-6 md:size-7 md:p-0 text-indigo-500 transition-all duration-300 delay-100 group-hover:md:ml-2 group-hover:ml-1"/>
                         
                     </div>
                 </div>
             </div>
             
             {/* heading */}
-            <div className="font-tertiary font-bold text-xl text-center  md:text-5xl w-[90%] leading-[120%] mt-6 mb-6 md:mt-10 md:mb-10 bg-gradient-to-tl from-indigo-900 via-indigo-200 to-indigo-100 bg-clip-text text-transparent motion-preset-expand motion-duration-2000">
+            <h1 className="font-tertiary font-bold text-3xl text-center  md:text-5xl w-[83%] md:w-[90%] leading-[120%] mt-6 mb-8 md:mt-10 md:mb-10 bg-gradient-to-tl from-indigo-900 via-indigo-200 to-indigo-100 bg-clip-text text-transparent motion-preset-expand motion-duration-2000">
 
             Revolutionize Your Brand Identity with Cutting-Edge AI 
-            </div>
+            </h1>
 
             {/* subheading */}
-            <div className="font-tertiary text-xs md:text-base w-[85%] leading-normal font-medium text-indigo-200  md:w-[65%] text-center mb-8 md:mb-14 md:leading-7 motion-preset-slide-up motion-duration-2000">Harness the Power of AI to Craft Unique, Memorable, and Tailored Brand Names Effortlessly, Elevating Your Business to New Heights and Ensuring It Stands Out in the Market!</div>
+            <h2 className="font-tertiary text-sm md:text-base w-[90%] leading-normal font-medium md:font-medium text-indigo-300  md:w-[65%] text-center mb-12 md:mb-14 md:leading-7 motion-preset-slide-up motion-duration-2000">Harness the Power of AI to Craft Unique, Memorable, and Tailored Brand Names Effortlessly, Elevating Your Business to New Heights and Ensuring It Stands Out in the Market!</h2>
 
             {/* horizontal line */}
                 <div className="relative w-[50%] md:w-[30%] h-1 md:h-2 rounded-full bg-gradient-to-b from-indigo-500 to-indigo-900 border-1 border-indigo-600 transition-all duration-300 drop-shadow-[0_10px_10px_rgba(79,_57,_246,_0.5)] motion-preset-rebound-right motion-duration-2000"></div>
 
                 {/* scroll-down button */}
-                <button onClick={() => scrollDown(0.6)} className="mt-10 h-8 w-8 md:mt-16 md:h-16 md:w-16 rounded-full flex items-center justify-center z-1 font-bold filter backdrop-blur-xs bg-gradient-to-b from-transparent via-indigo-500/10 to-indigo-500/10 border-1 border-indigo-600/25 motion-preset-expand cursor-pointer transition-shadow  duration-300 delay-none hover:shadow-[0px_5px_15px_1px_rgba(79,_57,_246,_0.45)] shadow-sm shadow-indigo-500/40 hover:bottom-1 hover:border-indigo-600/30 text-indigo-500 motion-preset-oscillate motion-duration-2000">
+                <button onClick={() => scrollDown(0.6)} className="mt-10 h-14 w-14 md:mt-16 md:h-16 md:w-16 rounded-full flex items-center justify-center z-1 font-bold filter backdrop-blur-xs bg-gradient-to-b from-transparent via-indigo-500/10 to-indigo-500/10 border-1 border-indigo-600/25 motion-preset-expand cursor-pointer transition-shadow  duration-300 delay-none hover:shadow-[0px_5px_15px_1px_rgba(79,_57,_246,_0.45)] shadow-sm shadow-indigo-500/40 hover:bottom-1 hover:border-indigo-600/30 text-indigo-500 motion-preset-oscillate motion-duration-2000">
                     <ArrowDownIcon
-                        className="md:size-7 size-4 p-0"
+                        className="md:size-7 size-6 p-0"
                     />  
                 </button>
         </div>
 
         {/* generate section */}
-        <div className="w-full h-full mt-8 md:mt-16 flex justify-center items-center flex-col ">
+        <div className="w-full h-full mt-14 md:mt-16 flex justify-center items-center flex-col ">
 
             {/* heading */}
-            <div className="font-tertiary font-bold text-xl w-[90%] text-center mt-16 md:text-5xl md:w-[90%] md:text-center leading-[120%] md:mt-24 md:mb-10 bg-gradient-to-tl from-indigo-900 via-indigo-200 to-indigo-100 bg-clip-text text-transparent mb-2">
+            <h2 className="font-tertiary font-bold text-2xl w-[90%] text-center mt-16 md:text-5xl md:w-[90%] md:text-center leading-[120%] md:mt-24 md:mb-10 bg-gradient-to-tl from-indigo-900 via-indigo-200 to-indigo-100 bg-clip-text text-transparent mb-4">
                 Let&#39;s Generate!
-            </div>
+            </h2>
 
             {/* user input  */}
            
@@ -196,7 +196,7 @@ const Landing = () => {
 
                 <form className="w-[100%] h-[100%]" onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="brandDescription" className="font-primary text-xs md:text-sm font-bold block text-indigo-200">
+                    <label htmlFor="brandDescription" className="font-primary text-sm font-bold block text-indigo-200">
                     Describe Your Brand in Brief
                     </label>
                     <textarea
@@ -206,13 +206,13 @@ const Landing = () => {
                     placeholder="eg:- Innovative, high-performance sportswear brand..."
                     required
                     autoComplete="off"
-                    className="w-full h-[50px] py-1 px-2.5 md:h-[100px] md:py-2 md:px-3 border-1 border-indigo-700/20 rounded-sm mt-2 mb-1.5 md:mt-1.5 md:mb-2.5 font-primary bg-indigo-950/30 resize-none md:text-sm overflow-auto scrollbar-thin scrollbar-thumb-indigo-400/50 scrollbar-track-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-transparent text-indigo-200/80 placeholder:text-indigo-300/70"
+                    className="w-full h-[90px] text-sm py-1 px-2.5 md:h-[100px] md:py-2 md:px-3 border-1 border-indigo-700/20 rounded-sm mt-2 mb-1.5 md:mt-1.5 md:mb-2.5 font-primary bg-indigo-950/30 resize-none md:text-sm overflow-auto scrollbar-thin scrollbar-thumb-indigo-400/50 scrollbar-track-transparent focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-transparent text-indigo-200/80 placeholder:text-indigo-300/70"
                     />
                 </div>
-                <label htmlFor="tags" className="font-primary md:text-sm text-xs font-bold block text-indigo-200">
+                <label htmlFor="tags" className="font-primary text- md:text-sm text-sm font-bold block text-indigo-200">
                     Ideal Tags/Names for Your Brand Identity
                 </label>
-                <div className="w-full py-1.5 px-2.5 md:py-3 md:px-3 h-[80px] md:h-[100px] overflow-y-auto overflow-x-hidden border-1 border-indigo-700/20 rounded-sm mt-2 mb-1.5 md:mt-1.5 md:mb-1 font-primary bg-indigo-950/30 scrollbar-thin scrollbar-thumb-indigo-400/50 scrollbar-track-transparent flex-wrap text-indigo-200/80 placeholder:text-indigo-300/70">
+                <div className="w-full py-1.5 px-2.5 md:py-3 md:px-3 h-[120px] md:h-[100px] overflow-y-auto overflow-x-hidden border-1 border-indigo-700/20 rounded-sm mt-2 mb-1.5 md:mt-1.5 md:mb-1 font-primary bg-indigo-950/30 scrollbar-thin scrollbar-thumb-indigo-400/50 scrollbar-track-transparent flex-wrap text-indigo-200/80 placeholder:text-indigo-300/70">
                     <div>
                     {tagsArray.map((tag, index) => (
                         <div
@@ -237,7 +237,7 @@ const Landing = () => {
                         onChange={(e) => setTag(e.target.value)}
                         onKeyDown={addTags}
                         placeholder="eg:- motion, velocity, athletic..."
-                        className="inline-block w-full border-none font-primary text-xs md:text-sm outline-none focus:outline-none text-slate-400 placeholder:text-indigo-300/70"
+                        className="inline-block w-full border-none font-primary text-sm md:text-sm outline-none focus:outline-none text-slate-400 placeholder:text-indigo-300/70"
                     />
                     ) : (
                     <div className="text-green-500 text-xs font-bold bg-green-500/10 rounded-md border-1 border-green-500/15 p-1 md:p-1.5 w-fit">
@@ -247,7 +247,7 @@ const Landing = () => {
                 </div>
                 <div className="text-slate-400 text-xs font-bold mb-2 md:mb-4">Tags: ({tagsArray.length} / 10)</div>
                 <div
-                    className={`text-xs font-bold  mb-4 p-2.5 md:mb-6 md:p-2 rounded-md motion-preset-expand ${
+                    className={`text-xs font-bold  mb-6 p-2.5 md:mb-6 md:p-2 rounded-md motion-preset-expand ${
                     isValid ? "text-green-500 bg-green-500/10 border-1 border-green-500/15" : "text-red-500 bg-red-500/10 border-1 border-red-500/15"
                     }`}
                 >
@@ -255,7 +255,7 @@ const Landing = () => {
                 </div>
                 <button
                     type="submit"
-                    className="group flex items-center justify-center w-full z-1 py-1 md:py-2 md:px-6 rounded-full font-bold filter backdrop-blur-xs bg-gradient-to-b from-transparent via-indigo-500/10 to-indigo-500/10 border-1 border-indigo-600/20 motion-preset-expand cursor-pointer transition-shadow  duration-300 delay-none hover:shadow-[0px_5px_15px_1px_rgba(79,_57,_246,_0.45)] shadow-sm  shadow-indigo-500/20 hover:bottom-1 hover:border-indigo-600/30 md:h-10 h-8"
+                    className="group flex items-center justify-center w-full z-1 py-1 md:py-2 md:px-6 rounded-full font-bold filter backdrop-blur-xs bg-gradient-to-b from-transparent via-indigo-500/10 to-indigo-500/10 border-1 border-indigo-600/20 motion-preset-expand cursor-pointer transition-shadow  duration-300 delay-none hover:shadow-[0px_5px_15px_1px_rgba(79,_57,_246,_0.45)] shadow-sm  shadow-indigo-500/20 hover:bottom-1 hover:border-indigo-600/30 md:h-10 h-10"
                 >
                     
                     
@@ -266,7 +266,7 @@ const Landing = () => {
                         className="my-icon mr-1 md:mr-2 text-indigo-500 group-hover:motion-preset-pop motion-duration-500"
                         />
 
-                        <span className="group-hover:motion-preset-shrink motion-duration-500 md:text-base text-sm text-indigo-500 ">Generate</span>
+                        <span className="group-hover:motion-preset-shrink motion-duration-500 md:text-base text-base lg:text-sm text-indigo-500 ">Generate</span>
                       </>
                       : <span className=" flex gap-1 md:gap-2 ">
                           <div className="rounded-full md:size-3 size-2 bg-indigo-500 motion-preset-oscillate motion-duration-600"></div>
@@ -289,7 +289,7 @@ const Landing = () => {
                     ) : data.length > 0 ? (
                 <div className=" md:w-[90%] w-[90%] md:mt-4 flex flex-wrap justify-center md:ap-3">
 
-                    <h2 className="font-tertiary font-bold text-xl md:text-5xl md:w-[90%] text-center leading-[120%] md:mt-10 md:mb-12 bg-gradient-to-tl from-indigo-900 via-indigo-200 to-indigo-100 bg-clip-text text-transparent motion-preset-expand mt-6 mb-2">
+                    <h2 className="font-tertiary font-bold text-2xl md:text-5xl md:w-[90%] text-center leading-[120%] md:mt-10 md:mb-12 bg-gradient-to-tl from-indigo-900 via-indigo-200 to-indigo-100 bg-clip-text text-transparent motion-preset-expand mt-16 mb-4">
                         Explore Your Brand Names
                     </h2>
 
@@ -297,13 +297,13 @@ const Landing = () => {
 
                         <div className="w-full flex justify-center items-center flex-col">
                             {/* copy button */}
-                            <button onClick={handleCopy} className="group flex items-center justify-center z-1 py-1 px-3 md:py-2 md:px-6 md:mb-3 mb-2  rounded-full  font-bold filter backdrop-blur-xs bg-gradient-to-b from-transparent via-indigo-500/10 to-indigo-500/10 border-1 border-indigo-600/20 motion-preset-expand cursor-pointer transition-shadow  duration-300 delay-none hover:shadow-[0px_5px_15px_1px_rgba(79,_57,_246,_0.45)] shadow-sm shadow-indigo-500/20 hover:bottom-1 hover:border-indigo-600/30">
+                            <button onClick={handleCopy} className="group flex items-center justify-center z-1 py-1.5 px-3.5 md:py-2 md:px-6 md:mb-3 mb-2  rounded-full  font-bold filter backdrop-blur-xs bg-gradient-to-b from-transparent via-indigo-500/10 to-indigo-500/10 border-1 border-indigo-600/20 motion-preset-expand cursor-pointer transition-shadow  duration-300 delay-none hover:shadow-[0px_5px_15px_1px_rgba(79,_57,_246,_0.45)] shadow-sm shadow-indigo-500/20 hover:bottom-1 hover:border-indigo-600/30">
 
                                 <RiFileCopyLine             
                                 className="md:mr-2 mr-1 size-5 md:12 group-hover:motion-preset-pop motion-duration-500 text-indigo-500"
                                 />
 
-                                <span className="group-hover:motion-preset-shrink motion-duration-500 text-xs md:text-base text-indigo-500 ">{isCopied ? "Copied" : "Copy All"}</span>
+                                <span className="group-hover:motion-preset-shrink motion-duration-500 text-sm md:text-base text-indigo-500 ">{isCopied ? "Copied" : "Copy All"}</span>
                             </button>
                             {/* horizontal line */}
                             <hr className="w-[80%] border-1 border-indigo-500/10 rounded-full mb-3" />

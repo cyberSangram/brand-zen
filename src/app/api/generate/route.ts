@@ -23,19 +23,43 @@ export async function POST(req: NextRequest) {
     const userPrompt = `Brand Description: ${brandDescription}. Tags: ${tagsArray.join(
       ", "
     )}.`;
+    // console.log(tagsArray);
+    // const userPrompt = `Brand Description: ${brandDescription}`;
 
-    const modifiedPrompt = `You are a brand name generator. Your task is to create 100 unique and original brand names based on the user's input. The user will provide a brand description and a list of keywords or tags in an array format.
+    // const modifiedPrompt = `You are a brand name generator. Your task is to create 100 unique and original brand names based on the user's input. The user will provide a brand description and a list of keywords or tags in an array format.
+    //  Output Format:
 
-        Instructions:
+    //      brand-name1,brand-name2,brand-name3, ... brand-name100...... Here's the user prompt - ${userPrompt}`;
 
-        Understand the Brand: Carefully analyze the provided brand description to understand the brand's core values, target audience, and industry.
-        Keyword Integration: Incorporate the provided keywords/tags into the brand names.
-        Creative Expansion: Generate additional relevant keywords based on the brand description and industry.
-        Word Combinations: Create 10-20 brand names by combining parts of the keywords (e.g., "Evolution" + "Cinematics" = "EvoCine," "CineEvolution").
-        Word Variations: Create 10-20 brand names by generating creative variations of keywords (e.g., "River" = "Riverr," "Rivver," "Rivrr") and combining them with other tags (e.g., "RiverrScape," "RivverMount").
-        Originality: Ensure all generated brand names are unique and do not exist on the internet. Avoid using copyrighted brand names.
-        Language: All brand names must be in English.
-        Clean Output: Provide the brand names in a comma-separated list, with no additional text or formatting.
+    const modifiedPrompt = `You are a highly creative brand name generator. Your task is to produce short, unique, and memorable two-word brand names based on a provided brand description and a list of keywords. The user will provide a brand description and a list of keywords or tags in an array format.
+
+    Instructions:
+    
+        generate 100 brand names and do make sure that you only write the names of the brand without any explaination or sentences
+        Understand the Brand: Carefully analyze the brand description to grasp the brand's core values, target audience, and overall aesthetic.
+        Incorporate Keywords: Seamlessly integrate the provided keywords or variations of them into the generated brand names.
+        Generate Unique Names: Create brand names that are original, catchy, and not already in widespread use.
+        Consider Tone and Style: Match the tone and style of the brand names to the brand description.
+        Provide Variety: Generate brand names in the following styles, 16 names per style:
+        Classic & Sophisticated
+        Modern & Minimalist
+        Playful & Inviting
+        Artisan & Earthy
+        Unique & Evocative
+        but never ever write the styles in the output
+        Keyword Integration: Within each style, ensure that 8 of the generated names directly incorporate the user-provided keywords or slight variations.
+        Word Combinations: Generate 20 brand names using combinations of:
+        10 combinations of the user-provided keywords.
+        10 combinations of words that the AI creates based on the meaning of the keywords.
+        Short and Precise Two-Word Names: Ensure all generated brand names consist of two short, concise, and easy-to-pronounce words.
+        Output: Provide the brand names in the following format:
+        Classic & Sophisticated: [16 brand names]
+        Modern & Minimalist: [16 brand names]
+        Playful & Inviting: [16 brand names]
+        Artisan & Earthy: [16 brand names]
+        Unique & Evocative: [16 brand names]
+        Word Combinations: [20 brand names]
+        
         Error Handling: If the user's input is unclear or faulty, generate 100 random, unique brand names following the same originality and language guidelines.
         Filter Vulgarity: Remove any vulgar or offensive words during the brand name creation process.
         Output Format:
