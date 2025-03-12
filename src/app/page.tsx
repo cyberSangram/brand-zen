@@ -59,7 +59,7 @@ const Landing = () => {
         if (isBrandValid && areTagsValid) {
           setValidationMessage("All fields are correct! Ready to Generate your Brand Name.");
         } else if (!isBrandValid && !areTagsValid) {
-          setValidationMessage("Brand description must be at least 30 characters long. At least 5 tags should be added.");
+          setValidationMessage("Brand description must be at least 30 characters long. At least 3 tags should be added.");
         } else if (!isBrandValid) {
           setValidationMessage("Brand description must be at least 30 characters long.");
         } else {
@@ -186,7 +186,7 @@ const Landing = () => {
 
             {/* user input  */}
            
-            <div className=" w-[90%] mt-4 mb-8 md:w-[480px] h-auto md:mt-4 md:mb-12 relative flex justify-center backdrop-blur-md text-xs px-6 py-4 md:px-10 md:py-8 text-indigo-300 rounded-xl bg-indigo-950/30 border-2 border-indigo-600/40 ">
+            <div className=" w-[90%] mt-4 mb-8 md:w-[460px] h-auto md:mt-4 md:mb-12 relative flex justify-center backdrop-blur-md text-xs px-6 py-4 md:px-10 md:py-8 text-indigo-300 rounded-xl bg-indigo-950/30 border-2 border-indigo-500/10 shadow-[0px_5px_20px_1px_rgba(79,_57,_246,_0.2)]">
 
                 {/* gradient blob */}
                 <div className=" absolute h-[200px] w-[200px] md:h-[850px] md:w-[850px] rounded-full bg-gradient-to-b from-indigo-400/30 via-indigo-500/15 to-transparent -top-20 -right-30 md:-top-20 md:right-140 filter blur-3xl z-0"></div>
