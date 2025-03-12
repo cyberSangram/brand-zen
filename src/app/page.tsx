@@ -255,18 +255,17 @@ const Landing = () => {
                 </div>
                 <button
                     type="submit"
-                    className="group flex items-center justify-center w-full z-1 py-1 md:py-2 md:px-6 rounded-full font-bold filter backdrop-blur-xs bg-gradient-to-b from-transparent via-indigo-500/10 to-indigo-500/10 border-1 border-indigo-600/20 motion-preset-expand cursor-pointer transition-shadow  duration-300 delay-none hover:shadow-[0px_5px_15px_1px_rgba(79,_57,_246,_0.45)] shadow-sm  shadow-indigo-500/20 hover:bottom-1 hover:border-indigo-600/30 md:h-10 h-10"
+                    className="group flex items-center justify-center w-full z-1 py-1 md:py-2 md:px-6 rounded-full font-bold filter backdrop-blur-xs bg-gradient-to-b from-transparent via-indigo-500/10 to-indigo-500/10 border-1 border-indigo-600/20 motion-preset-expand cursor-pointer transition-shadow  duration-300 delay-none hover:shadow-[0px_5px_15px_1px_rgba(79,_57,_246,_0.45)] shadow-sm  shadow-indigo-500/20 hover:bottom-1 hover:border-indigo-600/30 md:h-12 h-10"
                 >
                     
                     
                     { !loading ?
                       <>
                         <RiBardFill
-                        size={20}
-                        className="my-icon mr-1 md:mr-2 text-indigo-500 group-hover:motion-preset-pop motion-duration-500"
+                        className="my-icon mr-1 md:mr-2 text-indigo-500 group-hover:motion-preset-pop motion-duration-500 md:size-6 size-5"
                         />
 
-                        <span className="group-hover:motion-preset-shrink motion-duration-500 md:text-lg text-base  text-indigo-500 ">Generate</span>
+                        <span className="group-hover:motion-preset-shrink motion-duration-500 md:text-xl text-base  text-indigo-500 ">Generate</span>
                       </>
                       : <span className=" flex gap-1 md:gap-2 ">
                           <div className="rounded-full md:size-3 size-2 bg-indigo-500 motion-preset-oscillate motion-duration-600"></div>
