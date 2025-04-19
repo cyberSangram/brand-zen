@@ -63,7 +63,7 @@ const Landing = () => {
         } else if (!isBrandValid) {
           setValidationMessage("Brand description must be at least 30 characters long.");
         } else {
-          setValidationMessage(`At least three tags are required to proceed. Tags help refine your brand’s identity.`);
+          setValidationMessage(`At least 1 tag are required to proceed. Tags help refine your brand’s identity.`);
         }
       }, [brandDescription, tagsArray]);
     
