@@ -51,6 +51,21 @@ const Landing = () => {
         setTagsArray(newTagsArray);
       };
     
+
+      const copyTag =  async (event: React.MouseEvent<HTMLButtonElement>) => {
+
+        const buttonText = event.currentTarget.innerText
+        
+        try {
+          navigator.clipboard.writeText(buttonText)
+          console.log("Copied to the clipboard!")
+        }
+        catch (err) {
+          console.log("There was an error: ", err)
+        }
+
+      }
+
       useEffect(() => {
         const isBrandValid = brandDescription.trim().length >= 30;
         const areTagsValid = tagsArray.length >= 1;
@@ -310,6 +325,7 @@ const Landing = () => {
 
                         {data.map((name, index) => (
                             <button
+                                onClick={copyTag}
                                 key={index}
                                 className="group flex items-center justify-center z-1 py-0.5 px-3 md:py-1 md:px-6 text-xs rounded-full font-bold filter backdrop-blur-xs bg-gradient-to-b from-transparent to-indigo-500/10 border-1 border-indigo-600/25 motion-preset-expand cursor-pointer transition-shadow duration-300 delay-none hover:shadow-[0px_3px_20px_1px_rgba(79,_57,_246,_0.3)] shadow-sm shadow-indigo-500/20 hover:border-1 hover:border-indigo-600/20 text-indigo-300 md:text-sm ">
                                 {name}
