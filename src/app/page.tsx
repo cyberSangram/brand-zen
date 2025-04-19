@@ -53,17 +53,17 @@ const Landing = () => {
     
       useEffect(() => {
         const isBrandValid = brandDescription.trim().length >= 30;
-        const areTagsValid = tagsArray.length >= 3;
+        const areTagsValid = tagsArray.length >= 1;
         setIsValid(isBrandValid && areTagsValid);
     
         if (isBrandValid && areTagsValid) {
           setValidationMessage("All fields are correct! Ready to Generate your Brand Name.");
         } else if (!isBrandValid && !areTagsValid) {
-          setValidationMessage("Brand description must be at least 30 characters long. At least 3 tags should be added.");
+          setValidationMessage("Brand description must be at least 30 characters long. At least 1 tag should be added.");
         } else if (!isBrandValid) {
           setValidationMessage("Brand description must be at least 30 characters long.");
         } else {
-          setValidationMessage(`At least 3 tags should be added. Add ${3 - tagsArray.length} more tag(s) now`);
+          setValidationMessage(`At least three tags are required to proceed. Tags help refine your brand’s identity.`);
         }
       }, [brandDescription, tagsArray]);
     
