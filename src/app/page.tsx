@@ -50,8 +50,7 @@ const Landing = () => {
         const newTagsArray = tagsArray.filter((_, i) => i !== index);
         setTagsArray(newTagsArray);
       };
-    
-
+      
       const copyTag =  async (event: React.MouseEvent<HTMLButtonElement>) => {
 
         const buttonText = event.currentTarget.innerText
@@ -78,7 +77,7 @@ const Landing = () => {
         } else if (!isBrandValid) {
           setValidationMessage("Brand description must be at least 30 characters long.");
         } else {
-          setValidationMessage(`At least 1 tag are required to proceed. Tags help refine your brand’s identity.`);
+          setValidationMessage(`Add Atleast 1 tag / keyword to continue.`);
         }
       }, [brandDescription, tagsArray]);
     
@@ -328,17 +327,28 @@ const Landing = () => {
                                 onClick={copyTag}
                                 key={index}
                                 className="group flex items-center justify-center z-1 py-0.5 px-3 md:py-1 md:px-6 text-xs rounded-full font-bold filter backdrop-blur-xs bg-gradient-to-b from-transparent to-indigo-500/10 border-1 border-indigo-600/25 motion-preset-expand cursor-pointer transition-shadow duration-300 delay-none hover:shadow-[0px_3px_20px_1px_rgba(79,_57,_246,_0.3)] shadow-sm shadow-indigo-500/20 hover:border-1 hover:border-indigo-600/20 text-indigo-300 md:text-sm ">
-                                {name}
+                                {name[0]}
                             </button>
                         ))}
                     </div>
-
+                <div className="flex flex-col w-full items-center gap-0">
+                  <h2 className="font-tertiary font-bold text-2xl md:text-5xl md:w-[90%] text-center leading-[120%] md:mt-10 md:mb-10 bg-gradient-to-tl from-indigo-900 via-indigo-200 to-indigo-100 bg-clip-text text-transparent motion-preset-expand mt-16 mb-4">
+                                        Brand Name Concepts
+                                    </h2>
                 
+                    {data.map((name, index) => (
+                      <div key={index} className="font-primary md:w-[80%] h-auto mt-4 mb-8 md:mt-4 md:mb-12 flex flex-col items-start justify-center md:gap-0 gap-2 backdrop-blur-sm text-xs md:text-xs px-3 py-3 md:px-10 md:py-6 text-indigo-300 rounded-xl bg-indigo-950/30 border-2 border-indigo-600/40">
+                            <h2 className="text-base  md:text-3xl mb-2 text-slate-300 font-bold mt-0.5">{name[0]}</h2>
+                            <p className="text-slate-300/80 text-xs md:text-base italic mb-0.5">&#34;{name[1]["idea"]}&#34;</p>
+                            <p className="text-slate-300/80 text-xs md:text-base ">{name[1]["description"]}</p>
+                            <p></p>
+                      </div>
+                      ))}
+                </div>
                 </div>
                 ) : (
                 <div className="font-secondary text-3xl font-bold text-slate-300 mt-4"></div>
                 )}
-
 
     </div>
       
