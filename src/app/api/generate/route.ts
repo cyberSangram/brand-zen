@@ -31,7 +31,7 @@ Generate an array of 50 original brand names, if the user provides keywords or t
 
 Naming Rules:
 
-1. The first 25 names must be made by combining two real, meaningful words (e.g., "Mythoscope Studios") — evoking themes of mystery, vision, film, storytelling, cosmos, or mythology.
+1. The first 10 names must be made by combining two real, meaningful words (e.g., "Mythoscope Studios") — evoking themes of mystery, vision, film, storytelling, cosmos, or mythology.
 
 2. The last 25 names must be entirely new, invented words that sound cinematic, brandable, and mysterious (e.g., "Obscinova" = Obscure + Supernova). Note - show the breakdown of words that are formed using the combination of 2 two words in case of invented words in the "idea" key. In the description explain the meaning of the individual words too 
 
@@ -39,7 +39,7 @@ Naming Rules:
 
 4. Ensure names are original and do not conflict with existing well-known brands, especially in the film, media, or design industries.
 
-✅ Return the result ONLY as a clean JavaScript-style array of 50 items. Do not include backticks (\`\`\`) or any syntax highlighting.
+✅ Return the result ONLY as a clean JavaScript-style array of 20 items. Do not include backticks (\`\`\`) or any syntax highlighting.
 
 Each item must be formatted like this:
 
