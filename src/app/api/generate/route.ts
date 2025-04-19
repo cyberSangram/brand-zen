@@ -31,40 +31,20 @@ export async function POST(req: NextRequest) {
 
     //      brand-name1,brand-name2,brand-name3, ... brand-name100...... Here's the user prompt - ${userPrompt}`;
 
-    const modifiedPrompt = `You are a highly creative brand name generator. Your task is to produce short, unique, and memorable two-word brand names based on a provided brand description and a list of keywords. The user will provide a brand description and a list of keywords or tags in an array format.
+    const modifiedPrompt = `Generate an array of 100 original brand names, if the user provides keywords or tags, always include those creatively in a few names across both sections, based on the following concept:
+    ${userPrompt}
 
-    Instructions:
-    
-        generate 100 brand names and do make sure that you only write the names of the brand without any explaination or sentences
-        Understand the Brand: Carefully analyze the brand description to grasp the brand's core values, target audience, and overall aesthetic.
-        Incorporate Keywords: Seamlessly integrate the provided keywords or variations of them into the generated brand names.
-        Generate Unique Names: Create brand names that are original, catchy, and not already in widespread use.
-        Consider Tone and Style: Match the tone and style of the brand names to the brand description.
-        Provide Variety: Generate brand names in the following styles, 16 names per style:
-        Classic & Sophisticated
-        Modern & Minimalist
-        Playful & Inviting
-        Artisan & Earthy
-        Unique & Evocative
-        but never ever write the styles in the output
-        Keyword Integration: Within each style, ensure that 8 of the generated names directly incorporate the user-provided keywords or slight variations.
-        Word Combinations: Generate 20 brand names using combinations of:
-        10 combinations of the user-provided keywords.
-        10 combinations of words that the AI creates based on the meaning of the keywords.
-        Short and Precise Two-Word Names: Ensure all generated brand names consist of two short, concise, and easy-to-pronounce words.
-        Output: Provide the brand names in the following format:
-        Classic & Sophisticated: [16 brand names]
-        Modern & Minimalist: [16 brand names]
-        Playful & Inviting: [16 brand names]
-        Artisan & Earthy: [16 brand names]
-        Unique & Evocative: [16 brand names]
-        Word Combinations: [20 brand names]
-        
-        Error Handling: If the user's input is unclear or faulty, generate 100 random, unique brand names following the same originality and language guidelines.
-        Filter Vulgarity: Remove any vulgar or offensive words during the brand name creation process.
-        Output Format:
+Brand Naming Rules:
 
-        brand-name1,brand-name2,brand-name3, ... brand-name100...... Here's the user prompt - ${userPrompt}`;
+The first 50 names should be combinations of two meaningful real words (e.g., Mythoscope Studios) — evoke themes like mystery, visuals, mythology, cosmos, storytelling, or film.
+
+The last 50 names must be completely new, invented words that feel brandable, cinematic, and mysterious (e.g., Obscinova = Obscure + Supernova). Note - these output are for an example prompt 
+
+
+🛡️ Ensure that all 100 names are original and do not conflict with existing well-known brand names. Avoid names already in use by major brands or domains (especially in media, design, or film).
+
+🎯 Return ONLY the final result as a single comma-separated array like this:
+brandname1,brandname2,brandname3,...,brandname100`;
 
     const result = await model.generateContent(modifiedPrompt);
     const output = result.response.text();
